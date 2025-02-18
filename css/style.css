@@ -1,15 +1,24 @@
 body {
   margin: 0;
+  padding: 0;
 }
 .container {
-  position: relative;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  min-height: 70px;
-  background-color: black;
-  padding: 10px;
-  color: goldenrod;
+  z-index: 3;
+  min-height: 20px;
+  background-color: rgb(1, 1, 41);
+  padding: 5px;
   margin: 0;
-  font-family: monospace;
+  color: rgba(207, 141, 10, 0.8);
+  font-family: Arial, Helvetica, sans-serif;
+
+  img {
+    height: 20px;
+    padding: 20px;
+  }
 }
 
 .nav {
@@ -24,8 +33,23 @@ a {
   color: white;
 }
 
+.section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.overlay {
+  width: 100%;
+  height: 700px;
+}
 .back-div {
   position: absolute;
+  display: flex;
+  gap: 30px;
+  top: 10%;
+  padding-left: 60px;
   width: 100%;
   height: 100%;
   background: url(../media/cat.jpeg) no-repeat;
@@ -33,11 +57,15 @@ a {
   background-position: center;
   z-index: 1;
   color: white;
-  font-size: 80px;
+  margin: 0;
 }
 
 .front-div {
   position: absolute;
+  display: flex;
+  padding-left: 60px;
+  gap: 30px;
+  top: 10%;
   width: 80%;
   height: 100%;
   background: url(../media/pngtree-rottweiler-in-the-snow-dog-looking-pedigree-photo-picture-image_4618736.jpg)
@@ -45,30 +73,256 @@ a {
   background-size: cover;
   background-position: center;
   z-index: 2;
-  color: white;
+  margin: 0;
+}
+
+.right {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  z-index: 3;
+  padding-top: 150px;
+  padding-left: 30px;
+}
+
+.front-div:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 
 .showcase {
-  float: left;
-  padding-top: 70px;
-  color: goldenrod;
-  font-weight: 1000;
-  font-family: monospace;
-  font-size: 120px;
+  position: relative;
+  top: 30%;
+  width: 600px;
+  height: 800px;
   padding-left: 10px;
-  padding-right: 20px;
+  z-index: 3;
 }
 
-p {
-  font-size: 40px;
-  padding-top: 160px;
-  font-weight: bolder;
-  font-family: monospace;
-}
-
-H5 {
+.view {
   text-align: left;
-  font-family: monospace;
-  color: goldenrod;
-  font-size: 50px;
+  margin-left: 20px;
+  color: rgb(241, 206, 119);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.display {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(../media/paw.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  z-index: 2;
+}
+
+.display::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+
+.showcase-1 {
+  position: relative;
+  display: flex;
+  gap: 50px;
+  width: 100%;
+  height: 500px;
+  z-index: 2;
+  align-items: center;
+
+  .text-content {
+    color: black;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 100px;
+  }
+
+  .active {
+    color: goldenrod;
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    margin-left: 30px;
+    padding-left: 200px;
+  }
+}
+
+.highlight {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  margin: 0;
+  background-color: rgba(207, 141, 10, 0.8);
+
+  h3 {
+    color: rgba(0, 0, 0, 0.8);
+    padding: 10px 10px 10px 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin: 0;
+  }
+
+  strong {
+    color: black;
+  }
+}
+
+.container-3 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+
+  .head-dog {
+    width: 100%;
+    height: 800px;
+    background-image: url(../media/head.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.content {
+  width: 25%;
+  height: 27%;
+  float: left;
+  background-color: rgb(3, 3, 48);
+  gap: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 30px;
+  color: rgba(207, 141, 15, 0.8);
+  margin: 200px 20px 20px 50px;
+  padding: 20px;
+  text-align: center;
+}
+
+#boost {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  padding-left: 40px;
+  background-color: rgb(6, 6, 42);
+
+  img {
+    padding: 20px 20px 20px 400px;
+    margin-left: 30px;
+    height: 45px;
+  }
+  h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+
+    color: rgba(207, 141, 15, 0.8);
+    margin: 0;
+  }
+}
+
+.boxes {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  gap: 20px;
+}
+
+.bg1 {
+  position: relative;
+  width: 250px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding-right: 100px;
+  align-items: center;
+  margin: 15px;
+  text-align: center;
+  transition: background-image 0.35 ease-out;
+}
+
+.bg1:nth-child(1) {
+  background-image: url(../media/h9.jpeg);
+}
+
+.bg1:nth-child(2) {
+  background-image: url(../media/pit\ twin.jpg);
+}
+
+.bg1:nth-child(3) {
+  background-image: url(../media/bull5.jpeg);
+}
+
+.bg1:nth-child(4) {
+  background-image: url(../media/PITBULL.webp);
+}
+
+.bg1:nth-child(5) {
+  background-image: url(../media/ROT\ PUPPIES.jpeg);
+}
+.bg1:nth-child(1):hover {
+  background-color: rgba(207, 141, 15, 0.6);
+  background-image: url(../media/sport_prev_ui.png);
+  background-size: 100%;
+  border-radius: 20px;
+}
+
+.bg1:nth-child(2):hover {
+  background-color: rgba(207, 141, 15, 0.6);
+  background-image: url(../media/puppies_bag-removebg-preview.png);
+  background-size: 100%;
+  border-radius: 20px;
+}
+
+.bg1:nth-child(3):hover {
+  background-color: rgba(207, 141, 15, 0.6);
+  background-image: url(../media/small_breed-removebg-preview.png);
+  background-size: 100%;
+  border-radius: 20px;
+}
+
+.bg1:nth-child(4):hover {
+  background-color: rgba(207, 141, 15, 0.6);
+  background-image: url(../media/complete\ canned\ food.png);
+  background-size: 100%;
+  border-radius: 20px;
+}
+
+.bg1:nth-child(5):hover {
+  background-color: rgba(207, 141, 15, 0.6);
+  background-image: url(../media/jerky\ cut.png);
+  background-size: 100%;
+  border-radius: 20px;
+}
+.text {
+  position: relative;
+  color: #fff;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
