@@ -230,13 +230,15 @@ a {
     margin-left: 30px;
     height: 45px;
   }
-  h4 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
+}
 
-    color: rgba(207, 141, 15, 0.8);
-    margin: 0;
-  }
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: rgba(207, 141, 15, 0.8);
+  margin: 0;
+  padding: 20px;
 }
 
 .boxes {
@@ -245,19 +247,21 @@ a {
   height: 700px;
   display: flex;
   gap: 20px;
+  margin: 0;
 }
 
 .bg1 {
   position: relative;
   width: 250px;
-  height: 500px;
+  height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 20px;
   padding-right: 100px;
   align-items: center;
-  margin: 15px;
+  margin-top: 60px;
+  margin-bottom: 0;
   text-align: center;
   transition: background-image 0.35 ease-out;
 }
@@ -286,6 +290,7 @@ a {
   background-image: url(../media/sport_prev_ui.png);
   background-size: 100%;
   border-radius: 20px;
+  margin: 0;
 }
 
 .bg1:nth-child(2):hover {
@@ -325,4 +330,133 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-bottom: 0;
+}
+
+.social-handle {
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  background-image: url(../media/paw2.webp);
+  background-repeat: repeat;
+  background-size: 50%;
+  display: flex;
+  gap: 200px;
+  margin: 0;
+}
+
+.fb-container {
+  width: 400px;
+  height: 500px;
+  margin-left: 80px;
+}
+.about {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(6, 6, 44);
+  font-size: 35px;
+  font-weight: bolder;
+}
+
+.contact {
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding-left: 40px;
+  background-color: rgb(6, 6, 42);
+  margin-bottom: 30px;
+}
+
+.lead {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: url(../media/booster\ background1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.form-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 400px;
+  height: auto;
+  margin: auto;
+  padding: 20px;
+
+  input {
+    width: 100%;
+    height: 20px;
+    padding: 15px;
+    margin: 30px 0;
+    border-radius: 30px;
+    background-color: rgb(6, 6, 42);
+  }
+
+  label {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(6, 6, 42);
+  }
+
+  button {
+    width: 50%;
+    padding: 15px;
+    margin-top: 30px;
+    margin-left: 100px;
+    border-radius: 30px;
+    background-color: rgb(6, 6, 42);
+    font-size: 20px;
+    color: white;
+    cursor: grab;
+  }
+}
+
+footer {
+  position: relative;
+  background-color: rgb(6, 6, 42);
+  width: 100%;
+  height: 350px;
+  margin: auto;
+
+  p {
+    padding-top: 50px;
+    margin-top: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+  }
+}
+
+.Address {
+  position: relative;
+  display: flex;
+  gap: 80px;
+  margin-left: 40px;
+
+  img {
+    padding: 40px 20px;
+    margin-left: 30px;
+    height: 60px;
+  }
+
+  p {
+    color: #fff;
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+  }
 }
